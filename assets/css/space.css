@@ -1,0 +1,15 @@
+/* space.css */
+aside nav ul {
+    padding-left: 0;
+}
+
+header>*,
+main>*,
+footer>* {
+    margin: var(--spacing);
+    padding: 0 var(--spacing);
+}
+
+footer {
+    padding-bottom: var(--spacing);
+}

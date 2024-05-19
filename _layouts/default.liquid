@@ -1,0 +1,25 @@
+---
+layout: base
+---
+<header>
+    {% include 'navigation/dropdown' %}
+    <h1>{{ site.name }}</h1>
+</header>
+<main>
+    {% if folder %}
+    <aside>
+        {% include 'navigation/secondary' %}
+    </aside>
+    {% endif %}
+    <section aria-labelledby="{{ title | slugify }}">
+        {% if tags contains 'dropdown' %}{% include 'pagination/dropdown' %}{% endif %}
+        {% if tags contains 'secondary' %}{% include 'pagination/paginate-collections' %}{% endif %}
+        <h2 id="{{ title | slugify }}">{{ title }}</h2>
+        {% if description %}<p>{{ description }}</p>{% endif %}
+        {{ content }}
+    </section>
+</main>
+<footer>
+    {% include 'navigation/footer' %}
+    {% render 'copyright' %}
+</footer>

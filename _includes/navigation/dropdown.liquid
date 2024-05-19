@@ -1,0 +1,19 @@
+<nav aria-label="Primary">
+  <ul>
+    {%- for i in collections.primary %}
+    {%- if i.data.navigation %}
+    <li>{{ i.data.title }} &#8628;
+      <ul>
+        {%- for item in collections.dropdown -%}
+        {%- if i.data.navigation == item.data.navigation %}
+        <li><a href="{{ item.url | url }}"{% if page.url==item.url %} aria-current="page"{% endif %}>{{item.data.title}}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      </ul>
+    </li>
+    {%- else %}
+    <li><a href="{{ i.url | url }}"{% if page.url==i.url %} aria-current="page"{% endif %}>{{i.data.title}}</a></li>
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+</nav>

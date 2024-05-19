@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<header>
+    {% include 'navigation/primary' %}
+    <h1>{{ site.name }}</h1>
+</header>
+<main>
+    <section aria-labelledby="{{ title | slugify }}">
+        <h2>The Blog</h2>
+        {% include 'pagination/secondary' %}
+        {{ content }}
+    </section>
+</main>
+<footer>
+    {% include 'navigation/footer' %}
+    {% include 'copyright' %}
+</footer>

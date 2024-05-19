@@ -1,0 +1,8 @@
+{
+  "github": "https://github.com/mobile-michel/13-simple-blog",
+  "authorUrl": "https://michelmaillard.ch/",
+  "name": "Welcome",
+  "authorName": "Michel Maillard",
+  "description": "Eleventy 2.0.1 simple template with Liquid templating & Decap CMS.",
+  "css": "/assets/css/style.css"
+}

@@ -1,0 +1,71 @@
+backend: # Required
+  name: git-gateway
+  branch: main
+media_folder: "assets/img/" # Required
+public_folder: "assets/img/" # Required
+local_backend: true # Run "npx decap-server" for local backend | optional
+display_url: https://mobile-michel.github.io/13-simple-blog/
+collections: # Required
+  - name: "pages" # Required. Used in routes, e.g., /admin/collections/blog
+    label: "Pages" # Required. Used in the UI
+    files:
+      - label: "Homepage" # Used in the UI | required
+        name: "index" # Used in routes, e.g., /admin/collections/blog | required
+        file: "content/index.md" # The path to the file | required
+        fields: # The fields in front matter | required
+          - { label: "Title", name: "title", widget: "string" } # required
+          - { label: "Layout", name: "layout", widget: "string" }
+          - { label: "Collections", name: "tags", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.liquid"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - { label: "Collections", name: "tags", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blog"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Documentation"
+    name: "doc"
+    folder: "content/doc"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "configuration" # Required. Used in routes, e.g., /admin/collections/blog
+    label: "Configuration" # Required. Used in the UI
+    files:
+      - label: "Site settings"
+        name: "settings"
+        file: "_data/site.json"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Author name, name: authorName, widget: string }
+          - { label: Author URL, name: authorUrl, widget: string }
+          - { label: Favicon, name: favicon, widget: string }
+      - label: "Tokens"
+        name: "Tokens"
+        file: "_data/tokens.json"
+        fields:
+          - { label: Hue, name: hue, widget: string }
+          - { label: Max-width, name: max-width, widget: string }
+          - { label: Spacing, name: spacing, widget: string }
+          - { label: Text font size, name: text-font-size, widget: string }

@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(auto, 50rem);
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+main aside {
+    flex: 1 1 10em;
+}
+
+main section {
+    flex: 4 1 20em;
+}

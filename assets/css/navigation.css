@@ -1,0 +1,79 @@
+/* navigation.css */
+
+[aria-label=Primary] {
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    li {
+        border: 1px solid var(--grey100);
+        border-radius: 5px;
+        margin: .2em;
+        padding: .5em 1em;
+
+        ul {
+            display: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a[aria-current="page"] {
+        font-weight: bold;
+    }
+
+    li:hover ul {
+        display: block;
+        position: absolute;
+        background-color: var(--secondary-color);
+        border: 1px solid var(--grey100);
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+    }
+
+    li ul li {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li ul li a {
+        display: block;
+        padding: .5em 1em;
+    }
+
+    li:hover {
+        background-color: var(--grey800);
+    }
+
+    li ul li a:active {
+        background-color: #e0e0e0;
+    }
+}
+
+[aria-label="Pagination"],
+[aria-label="Footer"] ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    a {
+        padding: .2em .5em;
+        border: 1px solid var(--grey800);
+        border-radius: 5px;
+    }
+
+    a:hover {
+        background-color: var(--primary-color);
+    }
+}
+
+/* Path: assets/css/typography.css */

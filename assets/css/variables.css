@@ -1,0 +1,15 @@
+/* variables */
+:root {
+    --primary-color: hsl(220, 70%, 50%);
+    --secondary-color: hsl(220, 50%, 30%);
+    --grey100: #f8f9fa;
+    --grey200: #e9ecef;
+    --grey300: #dee2e6;
+    --grey400: #ced4da;
+    --grey500: #adb5bd;
+    --grey600: #6c757d;
+    --grey700: #495057;
+    --grey800: #343a40;
+    --grey900: #212529;
+    --text-font-size: clamp(1rem, 1.7vw, 1.25rem);
+}

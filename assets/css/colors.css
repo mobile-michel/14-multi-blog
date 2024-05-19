@@ -1,0 +1,26 @@
+/* colors.css */
+header {
+    background-color: var(--primary-color);
+    color: var(--grey100);
+}
+
+main,
+footer {
+    background-color: var(--grey200)
+}
+
+footer {
+    border-top: 1px solid var(--secondary-color)
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--grey900);
+        color: var(--grey100);
+    }
+
+    main,
+    footer {
+        background-color: var(--grey700)
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "14-multi-blog",
+  "version": "1.0.0",
+  "description": "Multi blog with Eleventy, Liquid & DecapCMS",
+  "main": "eleventy.config.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx decap-server & npx @11ty/eleventy --serve",
+    "build": "@11ty/eleventy",
+    "build-gp": "eleventy --pathprefix '14-multi-blog'"
+  },
+  "keywords": [
+    "eleventy",
+    "liquid"
+],
+  "author": "Michel Maillard",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
