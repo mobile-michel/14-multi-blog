@@ -1,6 +1,13 @@
 ---
-permalink: "assets/css/theme.css"
+permalink: assets/css/style.css
 ---
+/**************************************************
+Classless CSS stylesheet v1.0, Michel Maillard 
+**************************************************/
+
+/*************/
+/* Variables */
+/*************/
 
 :root {
   --hue: {{ tokens.hue }};
@@ -19,3 +26,11 @@ permalink: "assets/css/theme.css"
   --grey900: #212529;
   --text-font-size: {{ tokens.text-font-size }};
 }
+
+{% include "css/reset.css" %}
+{% include "css/base.css" %}
+{% include "css/flex.css" %}
+{% include "css/space.css" %}
+{% include "css/colors.css" %}
+{% include "css/navigation.css" %}
+{% include "css/form.css" %}

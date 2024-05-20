@@ -1,6 +1,5 @@
 ---
 title: Blog
-description: This blog is about photography.
 layout: default
 date: 2024-01-03
 eleventyExcludeFromCollections: true

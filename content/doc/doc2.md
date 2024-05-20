@@ -8,4 +8,11 @@ date: 2024-05-14
 
 With 11ty, you can easily create and organize your content, customize your site's layout and design, and generate static HTML files that can be deployed to any web server.
 
-To get started with 11ty, you can install it using npm:
+### 11ty elements
+- template language (default to LiquidJS)
+- layouts
+- collections
+- pagination (create pages from data)
+- data cascade
+- environment variables
+- filters

@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Doc
 date: 2024-01-02
 override:tags: ["primary"]
 navigation: doc

@@ -2,7 +2,7 @@
   <ul>
     {%- for i in collections.primary %}
     {%- if i.data.navigation %}
-    <li>{{ i.data.title }} &#8628;
+    <li>{{ i.data.title }} {% render 'arrow.svg' %}
       <ul>
         {%- for item in collections.dropdown -%}
         {%- if i.data.navigation == item.data.navigation %}
