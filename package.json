@@ -4,9 +4,9 @@
   "description": "Multi blog with Eleventy, Liquid & DecapCMS",
   "main": "eleventy.config.js",
   "scripts": {
-    "serve": "npx @11ty/eleventy --serve",
-    "start": "npx decap-server & npx @11ty/eleventy --serve",
-    "build": "@11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "serve": "npx decap-server & npx @11ty/eleventy --serve",
+    "build": "eleventy",
     "build-gp": "eleventy --pathprefix '14-multi-blog'"
   },
   "keywords": [

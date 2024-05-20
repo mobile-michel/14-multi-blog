@@ -1,3 +1,3 @@
 <nav aria-label="Pagination">
-<p>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{{ pagination.page.previous.data.title }}</a>{% else %}Nothing more...{% endif %} <- This is page {{ pagination.pageNumber | plus: 1 }} -> {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{{ pagination.page.next.data.title }}</a> {% else %}Nothing more...{% endif %}</p>
+<p>{% if pagination.href.previous %}<a role="button" href="{{ pagination.href.previous | url }}">{{ pagination.page.previous.data.title }}</a>{% else %}Nothing more...{% endif %} <- This is page {{ pagination.pageNumber | plus: 1 }} -> {% if pagination.href.next %}<a role="button" href="{{ pagination.href.next | url }}">{{ pagination.page.next.data.title }}</a> {% else %}Nothing more...{% endif %}</p>
 </nav>
