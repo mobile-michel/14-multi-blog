@@ -4,5 +4,6 @@
   "name": "Welcome",
   "authorName": "Michel Maillard",
   "description": "Eleventy 2.0.1 simple template with Liquid templating & Decap CMS.",
+  "favicon": "/assets/img/favicon.png",
   "css": "/assets/css/style.css"
 }
